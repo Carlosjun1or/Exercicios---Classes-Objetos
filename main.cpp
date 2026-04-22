@@ -72,6 +72,33 @@ public:
     }
 };
 
+// EXERCÍCIO 3 - ESTACIONAMENTO
+class Estacionamento
+{
+public:
+    int dia, horaEntrada, horaSaida;
+
+    Estacionamento(int dia, int horaEntrada, int horaSaida)
+    {
+        this->dia = dia;
+        this->horaEntrada = horaEntrada;
+        this->horaSaida = horaSaida;
+    }
+
+    float calcularValor()
+    {
+        int horas = horaSaida - horaEntrada;
+
+        if (horas <= 0)
+        {
+            cout << "Erro no horario\n";
+            return 0;
+        }
+
+        return horas * 5;
+    }
+};
+
 // MAIN
 int main()
 {
@@ -112,8 +139,20 @@ int main()
             cin >> a >> b >> c;
 
             Triangulo triangulo1(a, b, c);
-
+            
             triangulo1.tipoTriangulo();
+            break;
+        }
+
+        case 3:
+        {
+            int dia, horaEntrada, horaSaida;
+            cout << "Digite o dia, hora de entrada e hora de saida: ";
+            cin >> dia >> horaEntrada >> horaSaida;
+
+            Estacionamento estacionamento1(dia, horaEntrada, horaSaida);
+            
+            cout << "Valor a pagar: R$ " << estacionamento1.calcularValor() << endl;
             break;
         }
 
