@@ -7,10 +7,13 @@ class Matematica
 public:
     int a, b;
 
-    Matematica(int a, int b)
+    void entrada()
     {
-        this->a = a;
-        this->b = b;
+        cout << "Digite o valor de A: ";
+        cin >> a;
+
+        cout << "Digite o valor de B: ";
+        cin >> b;
     }
 
     int soma()
@@ -78,11 +81,16 @@ class Estacionamento
 public:
     int dia, horaEntrada, horaSaida;
 
-    Estacionamento(int dia, int horaEntrada, int horaSaida)
+    void entrada()
     {
-        this->dia = dia;
-        this->horaEntrada = horaEntrada;
-        this->horaSaida = horaSaida;
+        cout << "Digite o dia: ";
+        cin >> dia;
+
+        cout << "Digite a hora de entrada: ";
+        cin >> horaEntrada;
+
+        cout << "Digite a hora de saida: ";
+        cin >> horaSaida;
     }
 
     float calcularValor()
@@ -119,16 +127,14 @@ int main()
 
         case 1:
         {
-            int a, b;
-            cout << "Digite o valor de A e B: ";
-            cin >> a >> b;
 
-            Matematica m(a, b);
+            Matematica matematica1;
+            matematica1.entrada();
 
-            cout << "Soma: " << m.soma() << endl;
-            cout << "Subtracao: " << m.subtracao() << endl;
-            cout << "Multiplicacao: " << m.multiplicacao() << endl;
-            cout << "Divisao: " << m.divisao() << endl;
+            cout << "Soma: " << matematica1.soma();
+            cout << "\nSubtracao: " << matematica1.subtracao();
+            cout << "\nMultiplicacao: " << matematica1.multiplicacao();
+            cout << "\nDivisao: " << matematica1.divisao();
             break;
         }
 
@@ -139,20 +145,20 @@ int main()
             cin >> a >> b >> c;
 
             Triangulo triangulo1(a, b, c);
-            
+
             triangulo1.tipoTriangulo();
             break;
         }
 
         case 3:
         {
-            int dia, horaEntrada, horaSaida;
-            cout << "Digite o dia, hora de entrada e hora de saida: ";
-            cin >> dia >> horaEntrada >> horaSaida;
 
-            Estacionamento estacionamento1(dia, horaEntrada, horaSaida);
-            
-            cout << "Valor a pagar: R$ " << estacionamento1.calcularValor() << endl;
+            Estacionamento estacionamento1;
+            estacionamento1.entrada()
+
+                    cout
+                << "Valor a pagar: R$ " << estacionamento1.calcularValor();
+            ;
             break;
         }
 
