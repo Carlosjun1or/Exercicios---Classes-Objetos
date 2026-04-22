@@ -37,6 +37,41 @@ public:
     }
 };
 
+// EXERCÍCIO 2 - TRIANGULO
+class Triangulo
+{
+public:
+    float a, b, c;
+
+    Triangulo(float a, float b, float c)
+    {
+        this->a = a;
+        this->b = b;
+        this->c = c;
+    }
+
+    bool verificaTriangulo()
+    {
+        return (a < b + c && b < a + c && c < a + b);
+    }
+
+    void tipoTriangulo()
+    {
+        if (!verificaTriangulo())
+        {
+            cout << "Nao é triangulo\n";
+            return;
+        }
+
+        if (a == b && b == c)
+            cout << "Triangulo Equilatero\n";
+        else if (a == b || a == c || b == c)
+            cout << "Triangulo Isosceles\n";
+        else
+            cout << "Triangulo Escaleno\n";
+    }
+};
+
 // MAIN
 int main()
 {
@@ -67,6 +102,18 @@ int main()
             cout << "Subtracao: " << m.subtracao() << endl;
             cout << "Multiplicacao: " << m.multiplicacao() << endl;
             cout << "Divisao: " << m.divisao() << endl;
+            break;
+        }
+
+        case 2:
+        {
+            float a, b, c;
+            cout << "Digite os lados: ";
+            cin >> a >> b >> c;
+
+            Triangulo triangulo1(a, b, c);
+
+            triangulo1.tipoTriangulo();
             break;
         }
 
