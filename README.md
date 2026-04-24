@@ -2,15 +2,21 @@
 
 Este repositório contém uma coleção de exercícios práticos desenvolvidos em C++ com foco nos princípios fundamentais da **Programação Orientada a Objetos (POO)**. O objetivo é solidificar o entendimento de conceitos como classes, objetos, construtores, métodos e encapsulamento através de implementações claras e funcionais.
 
+</br>
+
 ## 📋 Descrição do Projeto
 
 O projeto consiste em um programa interativo que permite ao usuário selecionar e executar diferentes exercícios relacionados à POO. Cada exercício é implementado como uma classe separada, demonstrando a aplicação de atributos e métodos para resolver problemas específicos. O menu principal facilita a navegação entre as soluções.
 
 ### Exercícios Incluídos:
 
-- **Operações Matemáticas:** Uma classe para realizar cálculos básicos.
-- **Verificação e Classificação de Triângulos:** Uma classe para analisar as propriedades de triângulos.
-- **Cálculo de Valor em Estacionamento:** Uma classe para gerenciar o cálculo de custos de estacionamento.
+
+- ```Operações Matemáticas:``` Uma classe para realizar cálculos básicos.
+- ```Verificação e Classificação de Triângulos:``` Uma classe para analisar as propriedades de triângulos.
+- ```Cálculo de Valor em Estacionamento:``` Uma classe para gerenciar o cálculo de custos de estacionamento.
+
+
+</br>
 
 ## ⚙️ Funcionalidades Detalhadas
 
@@ -28,6 +34,8 @@ Esta classe é projetada para demonstrar operações aritméticas básicas utili
   - `int subtracao()`: Retorna a diferença entre `a` e `b`.
   - `int multiplicacao()`: Retorna o produto de `a` e `b`.
   - `float divisao()`: Retorna o quociente de `a` por `b`. Inclui tratamento para evitar divisão por zero.
+
+</br>
 
 ### 2. Classe `Triangulo`
 
@@ -48,6 +56,8 @@ Esta classe foca na validação e classificação de triângulos com base nos co
     - **Isósceles:** Dois lados são iguais.
     - **Escaleno:** Todos os três lados são diferentes.
 
+</br>
+
 ### 3. Classe `Estacionamento`
 
 Esta classe simula o cálculo do valor a ser pago em um estacionamento, baseando-se na duração da estadia.
@@ -56,6 +66,7 @@ Esta classe simula o cálculo do valor a ser pago em um estacionamento, baseando
   - `int dia`: Dia da semana (embora não utilizado no cálculo atual, pode ser uma extensão futura).
   - `int horaEntrada`: Hora de entrada no estacionamento.
   - `int horaSaida`: Hora de saída do estacionamento.
+
 - **Métodos:**
   - `void entrada()`: Solicita ao usuário o dia, a hora de entrada e a hora de saída.
   - `float calcularValor()`: Calcula o custo total. A regra é de **R$ 5,00 por hora**. Inclui tratamento para horários inválidos (saída antes da entrada).
