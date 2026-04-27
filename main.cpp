@@ -154,7 +154,7 @@ int main()
         {
 
             Estacionamento estacionamento1;
-            estacionamento1.entrada()
+            estacionamento1.entrada();
 
                     cout
                 << "Valor a pagar: R$ " << estacionamento1.calcularValor();
