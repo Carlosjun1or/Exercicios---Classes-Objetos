@@ -45,12 +45,21 @@ class Triangulo
 {
 public:
     float a, b, c;
+    // private float PI;
+
+    Triangulo()
+    {
+        this->a = 1;
+        this->b = 1;
+        this->c = 1;
+    }
 
     Triangulo(float a, float b, float c)
     {
         this->a = a;
         this->b = b;
         this->c = c;
+        // this->PI = 3.14159;
     }
 
     bool verificaTriangulo()
@@ -156,7 +165,7 @@ int main()
             Estacionamento estacionamento1;
             estacionamento1.entrada();
 
-                    cout
+            cout
                 << "Valor a pagar: R$ " << estacionamento1.calcularValor();
             ;
             break;
@@ -164,9 +173,9 @@ int main()
 
         case 0:
             cout << "Saindo...\n";
+        default:
             break;
 
-        default:
             cout << "Opcao invalida!\n";
         }
 
